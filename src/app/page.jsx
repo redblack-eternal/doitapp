@@ -87,20 +87,40 @@ export default function Home() {
 
   if (!session) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] text-center px-4">
-        <h1 className="text-4xl font-bold mb-12">
-          Just here to help you get things done.
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-14rem)] text-center px-4">
+        <span className="text-3xl text-muted-foreground mb-2">
+          Welcome to <i className="text-foreground">do it</i>
+        </span>
+        <h1 className="text-lg font-bold mb-2">
+          A to-do list that works like a calendar
         </h1>
+        <p className="text-base text-muted-foreground mb-12 max-w-md">
+          Organize your tasks by date and time, just like your calendar
+        </p>
         <div className="flex gap-4">
           <Link
             href="/auth/signup"
-            className="inline-flex items-center justify-center rounded-xl text-lg font-medium bg-[#5D4037] text-white hover:bg-[#6D4C41] h-12 px-8 py-2"
+            className="inline-flex items-center justify-center rounded-xl text-base font-medium 
+              bg-[#5D4037] text-white hover:bg-[#6D4C41] h-12 px-10 py-2 w-36
+              shadow-[0_4px_0px_0px_#4A332C] 
+              hover:shadow-[0_2px_0px_0px_#4A332C]
+              hover:translate-y-[2px] 
+              active:translate-y-[4px]
+              active:shadow-none
+              transition-all duration-150"
           >
             Create account
           </Link>
           <Link
             href="/auth/login"
-            className="inline-flex items-center justify-center rounded-xl text-lg font-medium bg-[#5D4037] text-white hover:bg-[#6D4C41] h-12 px-8 py-2"
+            className="inline-flex items-center justify-center rounded-xl text-base font-medium 
+              bg-[#5D4037] text-white hover:bg-[#6D4C41] h-12 px-10 py-2 w-36
+              shadow-[0_4px_0px_0px_#4A332C]
+              hover:shadow-[0_2px_0px_0px_#4A332C]
+              hover:translate-y-[2px]
+              active:translate-y-[4px]
+              active:shadow-none
+              transition-all duration-150"
           >
             Log In
           </Link>
